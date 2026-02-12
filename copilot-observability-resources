@@ -1,0 +1,129 @@
+Here’s a clear, practical guide on **how to get monitoring and observability for Microsoft Copilot**, based on the latest available Microsoft resources and ecosystem tools.
+
+***
+
+# ✅ **How to Get Monitoring & Observability for Microsoft Copilot**
+
+Microsoft Copilot (including **M365 Copilot**, **Copilot Studio agents**, and **custom AI agents**) does not expose *one single unified observability console* yet. However, **Microsoft provides multiple official paths** to achieve enterprise‑grade monitoring and observability.
+
+Below are the **four primary ways** you can get monitoring and observability for Copilot today.
+
+***
+
+# 🔍 **1. Use Azure Copilot Observability Agent (Preview)**
+
+If your Copilot integrates with **Azure Monitor** (common in enterprise scenarios), Microsoft offers an **AI-powered observability agent** that automatically:
+
+*   Analyzes telemetry from Azure resources
+*   Detects anomalies in logs & metrics
+*   Correlates signals across systems
+*   Generates root‑cause findings with explanations
+*   Integrates with alerts and the Azure Monitor workflow
+
+📌 Source: Microsoft Learn – Azure Copilot Observability Agent [\[learn.microsoft.com\]](https://learn.microsoft.com/en-us/azure/azure-monitor/aiops/observability-agent-overview)
+
+**Use Cases:**
+
+*   Monitoring Copilot workflows tied to Azure functions, APIs, data stores
+*   Automatic issue investigations
+*   Post‑incident diagnostics
+
+***
+
+# 🔍 **2. Connect Copilot Studio Agents to Azure Application Insights**
+
+If you are building Copilot agents in **Copilot Studio**, Microsoft recommends using **Application Insights** for:
+
+*   Real‑time telemetry
+*   Logging & structured events
+*   Conversation transcripts
+*   Performance metrics (response times, errors, failures)
+*   KQL-based analytics
+*   Alerts & dashboards
+
+📌 Source: Application Insights + Copilot Studio Integration Guide [\[reshmeeauckloo.com\]](https://reshmeeauckloo.com/posts/copilot-connecting-application-insights/)
+
+**What You Can Monitor:**
+
+*   User interactions
+*   Message sequences
+*   Success vs failure rates
+*   Response delay outliers
+*   Agent decision paths
+*   Conversation drop‑offs
+
+**Setup Steps (summary):**
+
+1.  Create an Application Insights resource
+2.  Link the connection string to your Copilot Studio agent
+3.  View telemetry in Application Insights & Copilot Studio dashboard
+
+***
+
+# 🔍 **3. Use Microsoft’s Observability Guidance for Pro‑Code Copilot Apps**
+
+If you are building **pro-code Copilot extensions**, plug-ins, or AI-powered workflows, Microsoft provides observability best practices:
+
+*   Track LLM lifecycle signals
+*   Instrument retrieval augmented generation (RAG)
+*   Monitor exception handling
+*   Evaluate prompt performance
+*   Logging for safety & failure cases
+
+📌 Source: Microsoft Cloud Observability for AI Solutions Guide [\[github.com\]](https://github.com/MicrosoftDocs/microsoft-cloud/blob/main/docs/dev/copilot/isv/Observability-for-AI.md)
+
+This applies to:
+
+*   Azure AI Foundry
+*   Custom copilots
+*   Complex multi-agent workflows
+*   ISV solutions
+
+***
+
+# 🔍 **4. Use the Copilot Studio Monitor (Governance Tool)**
+
+Because Copilot Studio lacks visibility for admins, the community-created **Copilot Studio Monitor** (built on the Power Platform CoE Kit) helps admins:
+
+*   Inventory all Copilot agents
+*   View agent configuration & connectors
+*   Track knowledge sources
+*   Identify risky or ungoverned agents
+*   Feed data into Power BI dashboards
+
+📌 Source: Copilot Studio Monitor – PowerTricks [\[powertricks.io\]](https://powertricks.io/copilot-studio-monitor/)
+
+This is especially useful for:
+
+*   Tenant-wide visibility
+*   Compliance and governance
+*   Understanding agent behavior & dependencies
+
+***
+
+# 🔍 **5. Additional Video-Based Deep Dive (Optional)**
+
+For more context, Microsoft community experts demonstrate:
+
+*   Integrating telemetry
+*   Logging best practices
+*   Monitoring complex multi-agent workflows
+*   Real examples using Application Insights
+
+📌 Source: Monitoring AI Agents with Azure Application Insights (YouTube) [\[youtube.com\]](https://www.youtube.com/watch?v=1n6NnH-mj28)
+
+***
+
+# 🧭 **Which Option Should You Use?**
+
+| Scenario                         | Best Monitoring Option                                |
+| -------------------------------- | ----------------------------------------------------- |
+| M365 Copilot usage analytics     | Microsoft Admin Center (built-in reports)             |
+| Copilot Studio agents            | **Application Insights** + Copilot Studio dashboard   |
+| Azure-based copilots             | **Azure Copilot Observability Agent** + Azure Monitor |
+| Multi-agent or pro-code LLM apps | Microsoft Observability for AI + Application Insights |
+| Governance across organization   | **Copilot Studio Monitor (Power BI)**                 |
+
+***
+
+# 📌 If you tell me which Copilot you are using (M365? Copilot Studio? Custom Azure agent?), I can give you a **step-by-step setup guide** tailored exactly to your environment.
